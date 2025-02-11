@@ -63,6 +63,11 @@ This is an useful stat if you plan to use the hashmap in a constrained environme
 
 ## Results as of Writing
 
+These results were generated on the following hardware:
+```
+AMD Ryzen 5 7640U w/ Radeon 760M Graphics (12) @ 4.97 GHz
+```
+
 The first column contains hashmap implementation used, the second column contains the time a test took to complete and
 the last column contains a factor of time compared to hm.h (my own implementation).
 
