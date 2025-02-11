@@ -1,0 +1,12 @@
+[submodule "src/external/tidwall_hashmap_c"]
+	path = src/external/tidwall_hashmap_c
+	url = https://github.com/tidwall/hashmap.c.git
+[submodule "src/external/stemt_hm_h"]
+	path = src/external/stemt_hm_h
+	url = https://github.com/Stemt/hm.h.git
+[submodule "src/external/sheredom_hashmap_h"]
+	path = src/external/sheredom_hashmap_h
+	url = https://github.com/sheredom/hashmap.h.git
+[submodule "src/external/mashpoe_c_hashmap"]
+	path = src/external/mashpoe_c_hashmap
+	url = https://github.com/Mashpoe/c-hashmap.git
