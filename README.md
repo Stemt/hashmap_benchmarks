@@ -44,8 +44,9 @@ Important if a hashmap will experience a lot removals.
 ### uint32 re set (reinsertions)
 
 Tests how long it takes to reinsert [BENCH_INSERTIONS](./src/bench_config.h) amount of uint32 keys and values into the hashmap, after the same keys/values had previously been inserted and removed.
+
 Some hashmaps may experience faster insertions after previously having had a lot of insertions and removals.
-This is because initial insertions are more likely to experience collisions and grow/rehashing events.
+This is because initial insertions are more likely to trigger collisions and grow/rehashing events.
 This test should mainly give an indication of if the hashmap shrinks after a bunch of removals and how this impacts performance compared to hashmaps that don't shrink.
 
 ### memory usage at end
