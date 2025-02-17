@@ -60,7 +60,6 @@ This is an useful stat if you plan to use the hashmap in a constrained environme
 - [hm.h by me](https://github.com/Stemt/hm.h)
 - [hashmap.h by sheredom](https://github.com/sheredom/hashmap.h)
 - [hashmap.c by tidwall](https://github.com/tidwall/hashmap.c/blob/master/hashmap.c)
-- [c-hashmap by Mashpoe](https://github.com/Mashpoe/c-hashmap)
 
 ## Results as of Writing
 
