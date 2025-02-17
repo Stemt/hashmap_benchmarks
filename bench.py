@@ -10,7 +10,6 @@ benchmarks = [
     'stemt_hm_bench',
     'sheredom_hashmap_h_bench',
     'tidwall_hashmap_c_bench',
-    'mashpoe_c_hashmap_bench',
 ]
 
 

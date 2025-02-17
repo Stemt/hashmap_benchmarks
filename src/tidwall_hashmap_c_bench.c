@@ -24,7 +24,8 @@ static struct hashmap* map;
 
 uint64_t KVPair_uint32_hash(const void *itemp, uint64_t seed0, uint64_t seed1) {
     const KVPair_uint32 *item = itemp;
-    return hashmap_sip(&item->key, sizeof(uint32_t), seed0, seed1);
+    uint32_t key = BENCH_UINT32_HASH(item->key);
+    return hashmap_sip(&key, sizeof(uint32_t), seed0, seed1);
 }
 
 UTEST(tidwall_hashmap_c_Bench, uint32_init){

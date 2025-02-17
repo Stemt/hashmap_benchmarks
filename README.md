@@ -66,7 +66,7 @@ This is an useful stat if you plan to use the hashmap in a constrained environme
 
 These results were generated on the following hardware:
 ```
-AMD Ryzen 5 7640U w/ Radeon 760M Graphics (12) @ 4.97 GHz
+AMD Ryzen 7 5800X (16) @ 4.85 GHz
 ```
 
 The first column contains hashmap implementation used, the second column contains the time a test took to complete and
@@ -74,38 +74,32 @@ the last column contains a factor of time compared to hm.h (my own implementatio
 
 ```
 --- uint32_init ---
-stemt_HM            :    2060.00 ns :       1.00x
-sheredom_hashmap_h  :     220.00 ns :       0.11x
-tidwall_hashmap_c   :     470.00 ns :       0.23x
-mashpoe_c_hashmap   :     240.00 ns :       0.12x
+stemt_HM            :     570.00 ns :       1.00x
+sheredom_hashmap_h  :     140.00 ns :       0.25x
+tidwall_hashmap_c   :     190.00 ns :       0.33x
 
 --- uint32_set ---
-stemt_HM            :       8.56 ms :       1.00x
-sheredom_hashmap_h  :      26.97 ms :       3.15x
-tidwall_hashmap_c   :       9.63 ms :       1.12x
-mashpoe_c_hashmap   :      57.53 ms :       6.72x
+stemt_HM            :      36.24 ms :       1.00x
+sheredom_hashmap_h  :      31.37 ms :       0.87x
+tidwall_hashmap_c   :       7.59 ms :       0.21x
 
 --- uint32_get ---
-stemt_HM            :  265880.00 ns :       1.00x
-sheredom_hashmap_h  :       3.70 ms :      13.90x
-tidwall_hashmap_c   :       5.58 ms :      21.00x
-mashpoe_c_hashmap   :       2.75 ms :      10.36x
+stemt_HM            :       3.47 ms :       1.00x
+sheredom_hashmap_h  :       4.44 ms :       1.28x
+tidwall_hashmap_c   :       5.96 ms :       1.72x
 
 --- uint32_remove ---
-stemt_HM            :  659920.00 ns :       1.00x
-sheredom_hashmap_h  :       7.03 ms :      10.66x
-tidwall_hashmap_c   :       8.35 ms :      12.66x
-mashpoe_c_hashmap   :       3.27 ms :       4.96x
+stemt_HM            :       4.94 ms :       1.00x
+sheredom_hashmap_h  :      11.22 ms :       2.27x
+tidwall_hashmap_c   :       7.14 ms :       1.45x
 
 --- uint32_re_set ---
-stemt_HM            :       1.38 ms :       1.00x
-sheredom_hashmap_h  :      11.57 ms :       8.36x
-tidwall_hashmap_c   :       8.89 ms :       6.42x
-mashpoe_c_hashmap   :      56.41 ms :      40.76x
+stemt_HM            :       8.60 ms :       1.00x
+sheredom_hashmap_h  :      10.23 ms :       1.19x
+tidwall_hashmap_c   :       7.82 ms :       0.91x
 
 --- memory usage at end ---
-stemt_HM            :      77.02 MB
-sheredom_hashmap_h  :      85.48 MB
-tidwall_hashmap_c   :      35.37 MB
-mashpoe_c_hashmap   :     278.32 MB
+stemt_HM            :     114.78 MB
+sheredom_hashmap_h  :     236.43 MB
+tidwall_hashmap_c   :      35.27 MB
 ```

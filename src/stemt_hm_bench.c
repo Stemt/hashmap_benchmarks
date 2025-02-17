@@ -12,12 +12,12 @@
 size_t uint32_hash(const char* key, size_t key_len){
   (void)(key_len);
   HM_ASSERT(key_len == sizeof(uint32_t));
-  return *(uint32_t*)(key);
+  uint32_t k = *(uint32_t*)(key);
+  return BENCH_UINT32_HASH(k);
 }
 
 HM_GEN_WRAPPER_PROTOTYPE(int);
 HM_GEN_WRAPPER_IMPLEMENTATION(int);
-
 
 static HM hm_uint32 = {0};
 

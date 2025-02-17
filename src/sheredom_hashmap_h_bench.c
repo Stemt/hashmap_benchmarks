@@ -13,7 +13,8 @@
 uint32_t hashmap_h_uint32_hash(uint32_t seed, const void* key, uint32_t key_len){
   (void)(seed);
   (void)(key_len);
-  return *(uint32_t*)(key);
+  uint32_t k = *(uint32_t*)(key);
+  return BENCH_UINT32_HASH(k);
 }
 
 int hashmap_h_uint32_compare(const void* a, uint32_t a_len, const void* b, uint32_t b_len){

@@ -5,6 +5,11 @@
 
 #define BENCH_INSERTIONS 0xFFFFFUL
 
+// very simple hash func for uint32 so it isn't a straight sequence
+// (source: https://excamera.com/sphinx/article-xorshift.html)
+#define BENCH_UINT32_HASH(key) ((key) ^ ((key) ^ ((key) ^ (key) << 13) >> 17) << 5)
+
+
 UTEST_STATE();
 
 int main(int argc, const char *const *argv){
