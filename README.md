@@ -4,7 +4,7 @@ This project is intended to test and compare different hashmap implementations.
 But mainly to gauge the performance of [my own library](https://github.com/Stemt/hm.h), so note that there may be bias.
 
 A focus is laid on the datastructures themselves, NOT the hash function used and or provided by a library.
-The rationale behind is that ideally every applicaton of a hashmap should have a custom hash function engineered specifically for that application.
+The rationale behind this is that ideally every applicaton of a hashmap should have a custom hash function engineered specifically for that application.
 e.g. if you're working with zipcodes, make a custom hash func for zipcodes, so that you can minimize the amount of collisions and optimize the performance of any given hashmap implementation.
 
 ## Requirements 
