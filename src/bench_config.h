@@ -1,21 +1,29 @@
 #ifndef BENCH_CONFIG_H
 #define BENCH_CONFIG_H
 
+#include <stdlib.h>
+
 #include "utest.h"
 
 #define BENCH_INSERTIONS 0xFFFFFUL
 
-// very simple hash func for uint32 so it isn't a straight sequence
-// (source: https://excamera.com/sphinx/article-xorshift.html)
-#define BENCH_UINT32_HASH(key) ((key) ^ ((key) ^ ((key) ^ (key) << 13) >> 17) << 5)
+static int seed = 0;
+// spreads out key distribution based on seed passed by bench.py
+#define BENCH_UINT32_HASH(key) (srand(key+seed),rand())
 
 
 UTEST_STATE();
 
 int main(int argc, const char *const *argv){
+  if(argc > 0){
+    seed = atoi(argv[0]);
+    argv++;
+    argc--;
+  }
+  srand(seed);
   int res = utest_main(argc, argv);
   fflush(stdout);
-  // wait so that python script can get peak mem usage
+  // wait so that bench.py can get mem usage
   getc(stdin); 
   return res;
 }

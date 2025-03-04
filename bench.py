@@ -2,8 +2,7 @@ import subprocess
 import psutil
 import os
 
-CFLAGS = '-std=c99 -O3'
-
+CFLAGS = '-DNDEBUG -std=c99 -O3 -ggdb'
 iterations = 10
 
 benchmarks = [
@@ -11,8 +10,6 @@ benchmarks = [
     'sheredom_hashmap_h_bench',
     'tidwall_hashmap_c_bench',
 ]
-
-
 
 def memory_usage_psutil(pid):
     # return the memory usage in bytes
@@ -32,11 +29,11 @@ def compile_bench_mark(name):
 def clean_bench_mark(name):
     os.remove(f'./{name}')
 
-def run_bench_mark(name):
+def run_bench_mark(name,iteration):
     output = ''
     mem_usage = 0
 
-    cmd = f'./{name}'
+    cmd = f'./{name} {iteration}'
     proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stdin=subprocess.PIPE)
     for line in proc.stdout:
         output += line.decode()
@@ -62,7 +59,7 @@ for i in range(iterations):
     print(f'  iteration: {i+1}/{iterations}')
     for name in benchmarks:
         print(f'    {name}')
-        output,mem_usage = run_bench_mark(name)
+        output,mem_usage = run_bench_mark(name,i)
         for line in output.split('\n'):
             if '_Bench' in line and 'ns' in line:
                 first,second= line.split('_Bench.')

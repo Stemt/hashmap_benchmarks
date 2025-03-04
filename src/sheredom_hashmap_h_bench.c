@@ -29,7 +29,7 @@ static struct hashmap_create_options_s hashmap_options = {0};
 UTEST(sheredom_hashmap_h_Bench, uint32_init){
   hashmap_options.hasher = hashmap_h_uint32_hash;
   hashmap_options.comparer = hashmap_h_uint32_compare;
-  hashmap_options.initial_capacity = 0;//BENCH_INSERTIONS*2;
+  hashmap_options.initial_capacity = 0;
   ASSERT_EQ(hashmap_create_ex(hashmap_options, &hashmap),0);
 }
 

@@ -73,32 +73,32 @@ the last column contains a factor of time compared to hm.h (my own implementatio
 
 ```
 --- uint32_init ---
-stemt_HM            :     570.00 ns :       1.00x
-sheredom_hashmap_h  :     140.00 ns :       0.25x
-tidwall_hashmap_c   :     190.00 ns :       0.33x
+stemt_HM            :     720.00 ns :       1.00x
+sheredom_hashmap_h  :     150.00 ns :       0.21x
+tidwall_hashmap_c   :     210.00 ns :       0.29x
 
 --- uint32_set ---
-stemt_HM            :      36.24 ms :       1.00x
-sheredom_hashmap_h  :      31.37 ms :       0.87x
-tidwall_hashmap_c   :       7.59 ms :       0.21x
+stemt_HM            :     168.34 ms :       1.00x
+sheredom_hashmap_h  :     241.91 ms :       1.44x
+tidwall_hashmap_c   :      71.90 ms :       0.43x
 
 --- uint32_get ---
-stemt_HM            :       3.47 ms :       1.00x
-sheredom_hashmap_h  :       4.44 ms :       1.28x
-tidwall_hashmap_c   :       5.96 ms :       1.72x
+stemt_HM            :      74.96 ms :       1.00x
+sheredom_hashmap_h  :      69.92 ms :       0.93x
+tidwall_hashmap_c   :      70.15 ms :       0.94x
 
 --- uint32_remove ---
-stemt_HM            :       4.94 ms :       1.00x
-sheredom_hashmap_h  :      11.22 ms :       2.27x
-tidwall_hashmap_c   :       7.14 ms :       1.45x
+stemt_HM            :      72.02 ms :       1.00x
+sheredom_hashmap_h  :     131.17 ms :       1.82x
+tidwall_hashmap_c   :      70.59 ms :       0.98x
 
 --- uint32_re_set ---
-stemt_HM            :       8.60 ms :       1.00x
-sheredom_hashmap_h  :      10.23 ms :       1.19x
-tidwall_hashmap_c   :       7.82 ms :       0.91x
+stemt_HM            :      73.98 ms :       1.00x
+sheredom_hashmap_h  :      75.15 ms :       1.02x
+tidwall_hashmap_c   :      72.09 ms :       0.97x
 
 --- memory usage at end ---
-stemt_HM            :     114.78 MB
-sheredom_hashmap_h  :     236.43 MB
-tidwall_hashmap_c   :      35.27 MB
+stemt_HM            :     118.51 MB
+sheredom_hashmap_h  :     437.64 MB
+tidwall_hashmap_c   :      35.29 MB
 ```
